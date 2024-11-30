@@ -3,20 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:TallerPrograJosePerez.Models"
              x:Class="TallerPrograJosePerez.Views.AboutPage"
-             Title="AboutPage">
+             Title="Informacion José Perez">
+    
     <ContentPage.BindingContext>
         <models:About />
     </ContentPage.BindingContext>
-    <VerticalStackLayout Spacing="10" Margin="10">
-        <HorizontalStackLayout Spacing="10">
-            <Image Source="dotnet_bot.png"
-                   SemanticProperties.Description="The dot net bot waving hello!"
-                   HeightRequest="64" />
-            <Label FontSize="22" FontAttributes="Bold" Text="{Binding Title}" VerticalOptions="End" />
-            <Label FontSize="22" Text="{Binding Version}" VerticalOptions="End" />
-        </HorizontalStackLayout>
+    
+    <VerticalStackLayout Spacing="15" Margin="10">
+        <Image Source="{Binding Icon}" SemanticProperties.Description="Mi yo mismo en icono" HeightRequest="100" />
 
-        <Label Text="{Binding Message}" />
-        <Button Text="Learn more..." Clicked="LearnMore_Clicked" />
+        <Label Text="{Binding Name}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <Label Text="{Binding Description}" FontSize="18" HorizontalOptions="Center" TextColor="Orange" />
+
+        <Button Text="Para más información" Clicked="LearnMore_Clicked" />
     </VerticalStackLayout>
 </ContentPage>

@@ -8,9 +8,10 @@ namespace TallerPrograJosePerez.Models
 {
     internal class About
     {
-        public string Title => AppInfo.Name;
-        public string Version => AppInfo.VersionString;
-        public string MoreInfoUrl => "https://aka.ms/maui";
-        public string Message => "This app is written in XAML and C# with .NET MAUI.";
+        public string Title { get; set; } = "Yo mismo";
+        public string Version { get; set; } = "1.0";
+        public string Name { get; set; } = "José Perez";
+        public string Description { get; set; } = "Soy estudiante apasionado por la tecnología y el coco.";
+        public string Icon { get; set; } = "icon_memeabout.jpg"; // Asegúrate de tener este ícono en tus recursos
     }
 }
